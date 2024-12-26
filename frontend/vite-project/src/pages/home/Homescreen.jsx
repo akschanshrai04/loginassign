@@ -15,7 +15,7 @@ function Homescreen() {
         }
     }, []);
     const handlelogout = () => {
-      axios.post("http://localhost:7000/api/logout" , {} , {withCredentials : true})
+      axios.post("https://loginassign-4tvv.onrender.com/api/logout" , {} , {withCredentials : true})
       .then((res) => {
         console.log(res.data);
         navigate("/login");
