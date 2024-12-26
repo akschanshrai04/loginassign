@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 })
 
 app.use(cors({
-    origin: "http://localhost:5173", // Frontend URL
+    origin: "https://loginassign-4tvv.onrender.com", // Frontend URL
     credentials: true, // Allow cookies
 }));
 
