@@ -7,7 +7,7 @@ dotenv.config();
 const verifyToken = async (req, res, next) => {
     try {
         // const token = req.cookies["jwt"];
-        const authHeader = req.headers["authorization"];
+        const authHeader = req.headers["jwt"];
         const token = authHeader && authHeader.split(" ")[1];
         console.log("Authorization header token:", token);
         console.log("inside checkauth : " , token)
