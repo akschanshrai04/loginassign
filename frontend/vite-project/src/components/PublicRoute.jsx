@@ -8,9 +8,9 @@ const PublicRoute = ({ children }) => {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                console.log("private ini")
+                console.log("private ini");
                 await axios.get("https://loginassign-4tvv.onrender.com/api/authCheck", { withCredentials: true });
-                console.log("Private post")
+                console.log("Private post");
                 setIsAuthenticated(true); // User is authenticated
             } catch {
                 setIsAuthenticated(false); // User is not authenticated
