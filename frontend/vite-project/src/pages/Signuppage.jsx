@@ -12,7 +12,7 @@ const Signuppage = () => {
 
   const handlesubmit = async (e) => {
     e.preventDefault();
-    axios.post( "http://localhost:7000/api/signup" , {email , password ,username} , {withCredentials: true} )
+    axios.post( "https://loginassign-4tvv.onrender.com/api/signup" , {email , password ,username} , {withCredentials: true} )
     .then((res) => {
       console.log(res.data);
       toast.success("Signup successful.");

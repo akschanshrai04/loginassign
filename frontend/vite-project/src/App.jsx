@@ -1,10 +1,7 @@
-import React from "react";
 import { BrowserRouter , Routes , Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Loginpage from "./pages/Loginpage";
 import Signuppage from "./pages/Signuppage";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
