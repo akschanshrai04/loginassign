@@ -10,7 +10,7 @@ exports.generatetokenandsetcookie = async (user , res) => {
     const token = jwt.sign({user}, JWT ,{expiresIn : '1d'});
     res.cookie("jwt", token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV !== "development" ? true : false,
+        secure: true,
         sameSite: "strict",
         maxAge: 24 * 60 * 60 * 1000,
     });
