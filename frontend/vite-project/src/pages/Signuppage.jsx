@@ -27,32 +27,6 @@ const Signuppage = () => {
   }
 
   return (
-    // <div className='h-screen w-full hero-bg bg-blue-400'>
-    //     <div className='flex justify-center items-center mx-3'>
-    //         <div className='backdrop-blur-sm shadow-2xl mt-20 w-full max-w-md p-8 space-y-6 bg-black/60 rounded-lg '>
-    //             <h1 className='text-2xl font-bold text-white text-center'> SignUp </h1>
-    //             <form onSubmit= {handlesubmit} class="space-y-4 md:space-y-6" action="#">
-    //                 <div>
-    //                   <label for="confirm-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">UserName</label>
-    //                   <input onChange = {(e) => setusername(e.target.value)} type="confirm-password" name="confirm-password" id="confirm-password" placeholder="UserName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
-    //                 </div>
-    //                 <div>
-    //                   <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Email</label>
-    //                   <input onChange = {(e) => setemail(e.target.value)} type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required=""/>
-    //                 </div>
-    //               <div>
-    //                   <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-    //                   <input onChange = {(e) => setpassword(e.target.value)} type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
-    //               </div>
-    //               <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
-    //               <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-    //                   Already have an account? <Link to = "/login" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link>
-    //               </p>
-    //           </form>
-    //         </div>
-    //     </div>
-    // </div>
-
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-500 to-white">
       <div className="relative bg-cover flex h-[80vh] w-[80%] max-w-4xl shadow-lg rounded-lg overflow-hidden">
         {/* Left Pane */}
@@ -62,17 +36,12 @@ const Signuppage = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
           <Link to = "/signup" className="bg-pink-500 text-white py-2 px-6 rounded-lg text-lg hover:bg-pink-600">Login</Link>
-          {/* <button className="bg-pink-500 text-white py-2 px-6 rounded-lg text-lg hover:bg-pink-600">
-            Sign Up
-          </button> */}
+          
         </div>
 
-        {/* Right Pane */}
         <div className="flex-1 bg-white flex flex-col justify-center items-center px-10 py-12">
-          {/* Logo */}
           <Layers className='-mt-20 mb-[70px]' size={70} color="#ec4899" />
 
-          {/* Form */}
           <form onSubmit={handlesubmit} className="w-full max-w-sm space-y-4">
             <input
               type="text"

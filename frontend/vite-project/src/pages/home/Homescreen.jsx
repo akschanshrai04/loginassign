@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
@@ -29,9 +28,7 @@ function Homescreen() {
 
     return (
       <div className='flex justify-evenly'>
-        {/* <div className="text-red-500">
-          homepage , hello {JSON.stringify(user.user.email)}
-        </div> */}
+        
         <div>
           Hello , this is HomePage
         </div>
