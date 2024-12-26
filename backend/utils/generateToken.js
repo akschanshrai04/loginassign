@@ -14,7 +14,7 @@ exports.generatetokenandsetcookie = async (user , res) => {
         sameSite: "strict",
         maxAge: 24 * 60 * 60 * 1000,
     });
-    console.log("token returned : " , token);
+    console.log("token generated and returned successfully : " , token);
 
     return token;
 }
