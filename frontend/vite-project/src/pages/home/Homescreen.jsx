@@ -1,19 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
 
 
 function Homescreen() {
     const navigate = useNavigate();
-    const [user, setUser] = useState([]);
-
-    useEffect(() => {
-        const user = JSON.parse(localStorage.getItem('user_info'));
-        console.log("check");
-        if (user) {
-            setUser(user);
-        }
-    }, []);
+    
     const handlelogout = () => {
       axios.post("https://loginassign-4tvv.onrender.com/api/logout" , {} , {withCredentials : true})
       .then((res) => {
