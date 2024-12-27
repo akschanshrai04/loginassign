@@ -9,7 +9,13 @@ const PrivateRoute = ( { children } ) => {
         const checkAuth = async () => {
             try {
                 console.log("private ini")
-                await axios.get("https://loginassign-4tvv.onrender.com/api/authCheck", { withCredentials: true });
+                await axios.get("https://loginassign-4tvv.onrender.com/api/authCheck", { 
+                    withCredentials: true,
+                    headers: {
+                        Authorization : `Bearer ${window.localStorage.getItem('jwt')}`
+                    }
+
+                });
                 console.log("private post")
                 setIsAuthenticated(true); // User is authenticated
             } catch {

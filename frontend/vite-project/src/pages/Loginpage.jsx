@@ -21,6 +21,7 @@ const Loginpage = () => {
     axios.post( "https://loginassign-4tvv.onrender.com/api/login" , {email , password} , {withCredentials: true})
     .then((res) => {
       console.log("hello" , res.data);
+      const yourtoken = res.data.token;
       window.localStorage.setItem('user_info',JSON.stringify(res.data))
       toast.success("Login successful.");
       navigate("/");
