@@ -98,15 +98,16 @@ exports.login = async (req, res) => {
             });
         }
         
-        const token = await generatetokenandsetcookie(user._id , res);
+        generatetokenandsetcookie(user._id , res);
+
         res.status(200).json({    
             success : true,
             message: "Login successful.",
-            Token: token,
             user
         });
     } catch (error) {
         console.log(error);
+        res.status(500).json({ success: false, message: "Internal server error" });
     }
 }
 
@@ -126,6 +127,7 @@ exports.logout = async (req, res) => {
 
 exports.authCheck = async (req, res) => {
 	try {
+        console.log("req.user : " , req.user);
 		res.status(200).json({ success: true, user: req.user });
 	} catch (error) {
 		console.log("Error in authCheck controller", error.message);
