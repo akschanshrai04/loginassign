@@ -9,10 +9,12 @@ const PrivateRoute = ( { children } ) => {
         const checkAuth = async () => {
             try {
                 console.log("private ini")
+                const token = window.localStorage.getItem('jwt');
+                console.log("inside checkauth private : " ,token);
                 await axios.get("https://loginassign-4tvv.onrender.com/api/authCheck", { 
                     withCredentials: true,
                     headers: {
-                        Authorization : `Bearer ${window.localStorage.getItem('jwt')}`
+                        Authorization : `Bearer ${token}`
                     }
 
                 });
